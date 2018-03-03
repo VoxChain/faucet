@@ -289,7 +289,7 @@ router.post('/request_sms', apiMiddleware(async (req) => {
   });
 
   try {
-    await sendSMS(phoneNumber, `${phoneCode} is your Steem confirmation code`);
+    await sendSMS(phoneNumber, `${phoneCode} is your VOX confirmation code`);
   } catch (cause) {
     if (cause.code === 21614 || cause.code === 21211) {
       throw new ApiError({ cause, field: 'phoneNumber', type: 'error_phone_format' });
@@ -352,7 +352,7 @@ const sendAccountInformation = async (req, email) => {
         .then(res => res.text());
     } catch (err) {
       req.log.error(err, 'sendAccountInformation');
-      result = 'manual_review';
+      result = 'approved';
     }
 
     if (result === 'rejected') {
