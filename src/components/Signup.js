@@ -156,7 +156,7 @@ class Signup extends Component {
         <div className="Signup__container">
           <div className="Signup__form">
             <div className="Signup__header">
-              <object data="img/logo.svg" type="image/svg+xml" id="logo" aria-label="logo" />
+              <object data="img/logo.jpg" type="image/jpg" id="logo" aria-label="logo" />
               {step !== 'finish' && <div className="Signup__steps">
                 <div className={`Signup__steps-step ${stepNumber === 0 ? 'waiting' : ''} ${stepNumber > 0 ? 'processed' : ''}`} />
                 <div className={`Signup__steps-step ${stepNumber === 1 ? 'waiting' : ''} ${stepNumber > 1 ? 'processed' : ''}`} />
@@ -166,9 +166,7 @@ class Signup extends Component {
             </div>
             {step === 'username' &&
             <div className="form-content">
-              {ref === 'steemit' &&
-                <object data="img/steemit-logo.svg" type="image/svg+xml" id="app-logo" aria-label="logo" />
-              }
+              
               <h1><FormattedMessage id="get_started" /></h1>
               <p>
                 {ref === 'steemit' && <FormattedMessage id="username_know_steemit" />}

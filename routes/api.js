@@ -352,7 +352,7 @@ const sendAccountInformation = async (req, email) => {
         .then(res => res.text());
     } catch (err) {
       req.log.error(err, 'sendAccountInformation');
-      result = 'approved';
+      result = 'manual_review';
     }
 
     if (result === 'rejected') {
