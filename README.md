@@ -41,3 +41,4 @@ BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 docker build -t="$USER/faucet:$BRANCH" .
 docker run -it -p 3000:3000 --env-file=.env "$USER/faucet:$BRANCH"
 ```
+
