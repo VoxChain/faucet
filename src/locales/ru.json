@@ -88,7 +88,7 @@
   "send_sms": "We need to send you a quick text.",
   "sign_in": "Sign in",
   "signup_username_right_text": "A single Vox account gets you into all Vox-based apps",
-  "signup_username_right_title": "One account is all you need",
+  "signup_username_right_title": "Одна учетная запись - все, что вам нужно",
   "sms_code": "We sent the code to you by SMS to {phoneNumber} {editLink}",
   "steem_signup": "Vox signup",
   "success_new_code_sent": "New code sent",
