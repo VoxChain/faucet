@@ -254,7 +254,7 @@ class Signup extends Component {
                 <FormattedMessage id="signup_username_right_text" />
               </p>
             </div>}
-            {step === 'username' && <img src="/img/signup-username.png" id="signup-username" aria-label="signup-username" alt="signup-username" />}
+            {step === 'username'}
             {step === 'email' && <object data="img/signup-email.svg" type="image/svg+xml" id="signup-email" aria-label="signup-email" />}
             {step === 'phoneNumber' && <object data="img/signup-phone.svg" type="image/svg+xml" id="signup-phone" aria-label="signup-phone" />}
             {step === 'confirmPhoneNumber' && <object data="img/signup-sms.svg" type="image/svg+xml" id="signup-sms" aria-label="signup-sms" />}
