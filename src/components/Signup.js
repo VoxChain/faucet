@@ -56,7 +56,7 @@ class Signup extends Component {
       phoneNumber: '',
       phoneNumberFormatted: '',
       token: props.location.query.token || '',
-      ref: props.location.query.ref || 'steemit',
+      ref: props.location.query.ref || 'vox',
       countryCode: '',
       prefix: '',
       completed: false,
@@ -169,8 +169,8 @@ class Signup extends Component {
               
               <h1><FormattedMessage id="get_started" /></h1>
               <p>
-                {ref === 'steemit' && <FormattedMessage id="username_know_steemit" />}
-                {ref !== 'steemit' && <FormattedMessage id="username_know" />}
+                {ref === 'vox' && <FormattedMessage id="username_know_steemit" />}
+                {ref !== 'vox' && <FormattedMessage id="username_know" />}
               </p>
               <FormSignupUsername
                 onSubmit={this.handleSubmitUsername}

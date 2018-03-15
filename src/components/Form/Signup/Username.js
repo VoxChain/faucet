@@ -103,12 +103,12 @@ class Username extends React.Component {
           <Form.Item>
             <Button type="primary" htmlType="submit" loading={this.state.submitting}><FormattedMessage id="continue" /></Button>
           </Form.Item>
-          {origin === 'steemit' &&
+          {origin === 'vox' &&
           <Form.Item>
             <div className="signin_redirect">
               <FormattedMessage
                 id="username_steemit_login"
-                values={{ link: <a href="https://steemit.com/login.html"><FormattedMessage id="sign_in" /></a> }}
+                values={{ link: <a href="https://vox.community/login.html"><FormattedMessage id="sign_in" /></a> }}
               />
             </div>
           </Form.Item>}

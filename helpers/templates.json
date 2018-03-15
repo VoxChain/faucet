@@ -1,8 +1,8 @@
 {
   "confirm_email": {
-    "from": "Steemit <noreply@vox.community>",
+    "from": "Vox <noreply@vox.community>",
     "subject": "Please confirm your email",
-    "text": "On Steemit, you get paid to post and share good content. But first, let's finish setting up your account.\n\nPlease confirm your email address by clicking on this link:\n\n{url}\n\nCheers\nYour friends at Vox"
+    "text": "On Vox, you get paid to post and share good content. But first, let's finish setting up your account.\n\nPlease confirm your email address by clicking on this link:\n\n{url}\n\nCheers\nYour friends at Vox"
   },
   "create_account": {
     "from": "Vox <noreply@vox.community>",
@@ -10,8 +10,8 @@
     "text": "Hi again,\n\nGood news! Your account information has been verfied.\n\nClick on this link to finish setting up your account.\n\n{url}\n\n Cheers,\nYour friends at Vox"
   },
   "reject_account": {
-    "from": "Steemit <noreply@vox.community>",
+    "from": "Vox <noreply@vox.community>",
     "subject" : "Your account is under review",
-    "text": "Thanks for signing up to Steemit. Your request to create an account is currently under review. We'll get back to you as soon as possible.\n\n Cheers,\nYour friends at Vox"
+    "text": "Thanks for signing up to Vox. Your request to create an account is currently under review. We'll get back to you as soon as possible.\n\n Cheers,\nYour friends at Vox"
   }
 }
