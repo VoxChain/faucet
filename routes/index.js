@@ -7,7 +7,7 @@ router.get('/.well-known/healthcheck.json', (req, res) => {
 });
 
 router.get('/*', (req, res) => {
-  res.render('index', { title: 'Sign up on Vox' });
+  res.render('index', { title: 'Регистрация на сервисе Vox' });
 });
 
 module.exports = router;
