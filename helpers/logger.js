@@ -6,6 +6,11 @@ const logger = bunyan.createLogger({
   streams: [{
     level: process.env.LOG_LEVEL || 'info',
     stream: process.stdout,
+  },{
+    type: 'rotating-file',
+    path: '/var/log/faucet.log',
+    period: '1d',
+    count: 7
   }],
 });
 
