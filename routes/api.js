@@ -308,13 +308,14 @@ router.get('/check', (req, res) => {
   // mocking the response according to
   // https://github.com/steemit/gatekeeper/blob/master/src/classifier.ts#L13
   // for some usecase test
-  if (req.query.val === 'approved') {
+ /* if (req.query.val === 'approved') {
     res.send('approved');
   } else if (req.query.val === 'rejected') {
     res.send('rejected');
   } else {
     res.send('manual_review');
-  }
+  }*/
+  res.send('approved');
 });
 
 const rejectAccount = async (req, email) => {
