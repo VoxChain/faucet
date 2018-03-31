@@ -61,7 +61,8 @@ async function actionLimit(ip, user_id = null) {
     promises.push(db.actions.count({ where: { user_id, created_at } }));
   }
   const [ipActions, userActions] = await Promise.all(promises);
-  if (userActions > 4 || ipActions > 32) {
+  // if (userActions > 4 || ipActions > 32)
+  if (userActions > 5000 || ipActions > 256000) {
     throw new ApiError({ type: 'error_api_actionlimit' });
   }
 }
@@ -334,7 +335,8 @@ const approveAccount = async (req, email) => {
     email,
   }, process.env.JWT_SECRET, { expiresIn: '7d' });
   await req.mail.send(email, 'create_account', {
-    url: `${req.protocol}://${req.get('host')}/create-account?token=${mailToken}`,
+    // url: `${req.protocol}://${req.get('host')}/create-account?token=${mailToken}`,
+    url: `https://signup.vox.community/create-account?token=${mailToken}`,
   });
 };
 
@@ -519,8 +521,8 @@ router.post('/create_account', apiMiddleware(async (req) => {
   try {
     await steem.broadcast.accountCreateWithDelegationAsync(
       process.env.DELEGATOR_ACTIVE_WIF,
-      process.env.CREATE_ACCOUNT_FEE,
-      process.env.CREATE_ACCOUNT_DELEGATION,
+      "0.001 VOX", //process.env.CREATE_ACCOUNT_FEE,
+      "30000.000000 VESTS", //process.env.CREATE_ACCOUNT_DELEGATION,
       process.env.DELEGATOR_USERNAME,
       username,
       owner,
