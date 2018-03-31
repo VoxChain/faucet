@@ -316,6 +316,7 @@ router.get('/check', (req, res) => {
   } else {
     res.send('manual_review');
   }*/
+  
   res.send('approved');
 });
 
