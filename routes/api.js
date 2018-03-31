@@ -280,13 +280,14 @@ router.post('/request_sms', apiMiddleware(async (req) => {
     phone_code: phoneCode,
     phone_number: phoneNumber,
     phone_code_attempts: 0,
+    status : 'approved'
   }, { where: { email: decoded.email } });
 
   await req.db.actions.create({
     action: 'send_sms',
     ip: req.ip,
     metadata: { phoneNumber },
-    user_id: user.id,
+    user_id: user.id
   });
 
   try {
@@ -316,7 +317,7 @@ router.get('/check', (req, res) => {
   } else {
     res.send('manual_review');
   }*/
-  
+
   res.send('approved');
 });
 
