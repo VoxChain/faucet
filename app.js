@@ -21,6 +21,8 @@ if (process.env.STEEMJS_URL) {
   steem.api.setOptions({ url: process.env.STEEMJS_URL });
 }
 
+steem.config.set('chain_id', '6d7a99c29fa3b33c4aec02f6f84917eff284b6e7712c607e2ee98b87296ce57a');
+
 http.globalAgent.maxSockets = 100;
 https.globalAgent.maxSockets = 100;
 const app = express();
